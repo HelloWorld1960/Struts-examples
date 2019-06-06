@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+	<package name="user" extends="struts-default">
+		<!-- Cuando se carga una pagina, se tiene que apuntar a una accion y esa 
+			configuracion se captura en esta seccion. -->
+		<action name="inicio">
+			<result>paginas/registro.jsp</result>
+		</action>
+		
+	</package>
+</struts>

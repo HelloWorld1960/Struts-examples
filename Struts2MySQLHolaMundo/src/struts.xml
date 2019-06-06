@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+    <!-- El controlador despacha la peticion, identificando la accion y dispara la logica de negocio apropiada.
+          En funcion del valor devuelto por el modelo el controlador elige la siguiente vista a mostrar.-->
+    <struts>
+    	<package name="user" extends="struts-default">
+    		<!-- Cuando se carga una pagina, se tiene que apuntar a una accion y esa configuracion se captura en
+    			 esta seccion. -->
+    		<action name="saludo" class="action.HolaMundoAction" method="hola">
+    			<result name="exito">/index.jsp</result>
+    		</action>
+    	</package>
+    </struts>

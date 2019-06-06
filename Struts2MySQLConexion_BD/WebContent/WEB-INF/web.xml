@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<!-- Este archivo se encarga de hacer el mapeo de todas las peticiones que se realizan. -->
+	<display-name>Struts2MySQLConexion_BD</display-name>
+	
+	<welcome-file-list>
+		<welcome-file>/index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- Clase con la que apache hace sus definiciones. Struts define su filter
+		dispacher para que se haga la clase del filtro del servlet que va inicilaizar
+		el framework y que va manejar todas sus peticiones. Es decir, struts mapea
+		todas peticiones que hace el usuario y esta clase aplicara los filter dispacher
+		y posteriormente proseguira con las acciones que son los actions. -->
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+
+	<!-- Para mapear la peticion que debe procesar Struts se necesita un filter maping. El /* indica que
+		mapeara todas las peticiones que sigan este patron redirigiendolas al controlador(struts.xml) -->
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+</web-app>
